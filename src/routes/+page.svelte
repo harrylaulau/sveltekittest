@@ -1,11 +1,14 @@
 <script lang="ts">
 	import type { ActionData } from './$types';
 	export let form: ActionData;
-	$: console.log(form?.success);
+	$: console.log(form ?? 'undefined');
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+{#each [0, 1, 2, 3, 4, 5, 6] as x}
+	<div>
+		<a href={'/?v=' + x}>to {x}</a>
+	</div>
+{/each}
 <form method="POST">
-	<button>Log in</button>
+	<button>print action output</button>
 </form>
