@@ -4,7 +4,7 @@
 	$: console.log(form ?? 'undefined');
 </script>
 
-{#each [0, 1, 2, 3, 4, 5, 6] as x}
+{#each [0, 1, 2, 3, 4] as x}
 	<div>
 		<a href={'/?v=' + x}>to {x}</a>
 	</div>
